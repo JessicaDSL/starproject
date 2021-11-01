@@ -1,7 +1,11 @@
+import React from 'react'
+
+import CharapterList from './components/CharapterList'
+
 function App() {
   return (
     <div>
-      oi
+      <CharapterList />
     </div>
   );
 }
