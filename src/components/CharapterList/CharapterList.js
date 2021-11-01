@@ -5,7 +5,6 @@ import { list } from "./content";
 import CharapterCard from "../CharapterCard/CharapterCard";
 
 const CharapterList = () => {
-  console.log(list);
   return (
     <Container>
       {list.map((item, key) => (
