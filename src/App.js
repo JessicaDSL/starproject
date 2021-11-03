@@ -1,11 +1,13 @@
 import React from 'react'
+import GlobalStyle from './global/globalStyles';
 
-import CharapterList from './components/CharapterList'
+import Home from './pages/Home'
 
 function App() {
   return (
     <div>
-      <CharapterList />
+      <GlobalStyle />
+      <Home />
     </div>
   );
 }
