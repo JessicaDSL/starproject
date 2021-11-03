@@ -23,12 +23,8 @@ const Home = () => {
   }, []);
 
   function handleDelete(name) {
-    character.map(() => {
-      const characterRemoved = character.filter(
-        (person) => person.name !== name
-      );
-      return setCharacter(characterRemoved);
-    });
+    const characterRemoved = character.filter((person) => person.name !== name);
+    return setCharacter(characterRemoved);
   }
 
   return (
