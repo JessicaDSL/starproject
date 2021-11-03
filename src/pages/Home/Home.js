@@ -5,9 +5,13 @@ import { Container } from "./styles";
 import CharacterList from "../../components/CharacterList";
 
 const Home = () => {
-  const [character, setCharacter] = useState([]);
+  const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
+    fetchData()
+  }, []);
+
+  const fetchData = () => {
     axios(`https://swapi.dev/api/people/`)
       .then((response) => {
         const person = response.data?.results?.map((item) => {
@@ -15,22 +19,22 @@ const Home = () => {
           const eyeColor = item?.eye_color;
           return { name, eyeColor };
         });
-        setCharacter(person);
+        setCharacters(person);
       })
       .catch((error) => {
         console.log("Error: ", error);
       });
-  }, []);
+  };
 
   function handleDelete(name) {
-    const characterRemoved = character.filter((person) => person.name !== name);
-    return setCharacter(characterRemoved);
+    const characterRemoved = characters.filter((person) => person.name !== name);
+    return setCharacters(characterRemoved);
   }
 
   return (
     <Container>
       <h1>Personagens StarWars</h1>
-      <CharacterList character={character} handleDelete={handleDelete} />
+      <CharacterList characters={characters} handleDelete={handleDelete} />
     </Container>
   );
 };
