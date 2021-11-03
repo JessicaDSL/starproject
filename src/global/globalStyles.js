@@ -11,6 +11,8 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     display: flex;
     justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #101010;
   }
 `;
  
