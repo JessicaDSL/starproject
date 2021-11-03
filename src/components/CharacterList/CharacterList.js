@@ -3,10 +3,10 @@ import React from "react";
 import { Container } from "./styles";
 import CharacterCard from "../CharacterCard/CharacterCard";
 
-const CharacterList = ({ handleDelete, character = [] }) => {
+const CharacterList = ({ handleDelete, characters = [] }) => {
   return (
     <Container>
-      {character.map((person) => (
+      {characters.map((person) => (
         <CharacterCard
           key={person.name}
           name={person.name}
