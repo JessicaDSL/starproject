@@ -9,4 +9,4 @@ Nesse projeto, foram utilizadas as tecnologias ReactJS, styled-component, focado
 
 ### Demonstração do Projeto:
 
-![alt-text](https://imgur.com/a/n2q6Zn8)
+![alt-text](https://media.giphy.com/media/fFLKUb3fwdMHNVGVPd/giphy.gif)
